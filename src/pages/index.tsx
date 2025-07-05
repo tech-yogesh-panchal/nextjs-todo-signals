@@ -1,11 +1,15 @@
-import Image from 'next/image'
+'use client';
+// src/pages/index.tsx
+import TodoForm from "../components/TodoForm";
+import TodoList from "../components/TodoList";
+import { todos } from "../signals/todos";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <h1 className="text-4xl font-bold">Welcome to Next.js!</h1>
-      </div>
+    <main style={{ maxWidth: "500px", margin: "auto", paddingTop: "40px" }}>
+      <h1>Todo List with React Signals</h1>
+      <TodoForm />
+      <TodoList />
     </main>
-  )
+  );
 }
